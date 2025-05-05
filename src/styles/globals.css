@@ -1,0 +1,263 @@
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 250, 245, 235;
+  --background-end-rgb: 255, 250, 240;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    )
+    fixed;
+}
+
+/* Configurações para animação 3D do envelope */
+.envelope-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.envelope-flap {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom font classes */
+.font-serif {
+  font-family: 'Lora', serif;
+}
+
+.font-handwritten {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+.font-typewriter {
+  font-family: 'Special Elite', cursive;
+  line-height: 1.5;
+}
+
+.font-cursive {
+  font-family: 'Pacifico', cursive;
+  line-height: 1.5;
+}
+
+/* Paper textures */
+.classic-paper {
+  background-image: 
+    linear-gradient(rgba(245, 245, 220, 0.1) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(245, 245, 220, 0.1) 2px, transparent 2px);
+  background-size: 50px 50px;
+}
+
+.parchment-paper {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ca8a04' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.linen-paper {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f1f5f9' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.recycled-paper {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 10 12c1.67 0 3.182-.683 4.27-1.785A5.998 5.998 0 0 0 14 12h2a4 4 0 0 1 4-4V6c-1.67 0-3.182.683-4.27 1.785C15.905 7.22 16 6.622 16 6c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 20 6V4a4 4 0 0 1-4-4h-2c0 .622.095 1.221.27 1.785A5.982 5.982 0 0 0 10 0C8.33 0 6.818.683 5.73 1.785 5.905 1.22 6 .622 6 0H4a4 4 0 0 1-4 4v2c1.67 0 3.182-.683 4.27-1.785C4.095 4.78 4 5.378 4 6c0 .622.095 1.221.27 1.785A5.982 5.982 0 0 0 0 6v2a4 4 0 0 1 4 4h2zm-4 0a2 2 0 0 0-2-2v2h2zm16 0a2 2 0 0 1 2-2v2h-2zM0 4a2 2 0 0 0 2-2H0v2zm20 0a2 2 0 0 1-2-2h2v2zm-10 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' fill='%23a8a29e' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.blue-paper {
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Letter stamp */
+  .letter-stamp {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding: 0.5rem;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgba(200, 80, 60, 0.1);
+  border: 1px dashed rgba(180, 80, 60, 0.3);
+  transform: rotate(6deg);
+  user-select: none;
+}
+
+.letter-stamp::before {
+    content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1px dashed rgba(180, 80, 60, 0.2);
+  border-radius: 3px;
+}
+
+/* Delivered stamp */
+.delivered-stamp {
+  position: relative;
+}
+
+.delivered-stamp::after {
+  content: 'DELIVERED';
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: 'Special Elite', cursive;
+  transform: rotate(-20deg);
+  color: rgba(200, 30, 30, 0.15);
+  border: 5px solid rgba(200, 30, 30, 0.15);
+  padding: 8px 16px;
+  border-radius: 8px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 40;
+}
+
+/* Form styles */
+  .input-styled {
+  @apply w-full px-4 py-2 border border-amber-200 text-amber-800 rounded-md outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 transition-colors bg-white/90 shadow-inner;
+  }
+  
+  .textarea-styled {
+  @apply w-full px-4 py-3 border border-amber-200 text-amber-800 rounded-md outline-none focus:ring-2 focus:ring-amber-300 focus:border-amber-300 transition-colors bg-transparent shadow-inner resize-none;
+  }
+  
+  .ornate-container {
+  @apply relative rounded-xl overflow-hidden p-8 md:p-10;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-amber-600 text-white font-medium rounded-md hover:bg-amber-700 transition-colors flex items-center gap-2 shadow-md;
+}
+
+.letter-card {
+  @apply bg-white p-6 rounded-xl border border-amber-200 shadow-xl relative;
+}
+
+.letter-writing-area {
+  @apply min-h-[400px] flex flex-col;
+}
+
+/* Dashed line */
+.dashed-line {
+  @apply w-full h-[1px] border-t border-dashed border-amber-300;
+}
+
+/* Animations */
+@keyframes sealAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(6deg);
+  }
+}
+
+/* Horse animation for tracking */
+.horse-gallop {
+  animation: horse-gallop 1s infinite linear;
+}
+
+@keyframes horse-gallop {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-3px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(1px) rotate(-1deg);
+  }
+}
+
+/* Envelope folding animation */
+@keyframes foldTop {
+  from { transform: rotateX(-180deg); }
+  to { transform: rotateX(0); }
+}
+
+@keyframes foldBottom {
+  from { transform: rotateX(180deg); }
+  to { transform: rotateX(0); }
+}
+
+@keyframes foldLeft {
+  from { transform: rotateY(180deg); }
+  to { transform: rotateY(0); }
+}
+
+@keyframes foldRight {
+  from { transform: rotateY(-180deg); }
+  to { transform: rotateY(0); }
+}
+
+@keyframes paperFold {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+/* Animação suave para carta em trânsito */
+@keyframes paper-fly {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(-12px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.flying-letter {
+  animation: paper-fly 7s infinite ease-in-out;
+} 
